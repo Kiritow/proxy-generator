@@ -1,5 +1,11 @@
 # Nginx Config Generator for Proxy
 
+Generate nginx `http` section config from more user-friendly json.
+
+[acme.sh](https://github.com/acmesh-official/acme.sh) is suggested for certificate management.
+
+## Config keys
+
 `server`: Domain Name
 
 `type`: Config type, default to `proxy`. Available options: `proxy`, `prefix`
