@@ -188,7 +188,7 @@ def parse_configs(configs):
                 "value": "on",
             }, {
                 "key": "ssl_trusted_certificate",
-                "value": "{}/{}/chain.cer".format(ACME_ROOT, cert_name),
+                "value": "{}/{}/ca.cer".format(ACME_ROOT, cert_name),
             }]
 
             ws_settings = [{
