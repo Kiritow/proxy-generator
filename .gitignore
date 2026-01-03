@@ -2,4 +2,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+venv/
+.venv/
+
 local/
+nginx-cache/
+nginx-pid/
+nginx-certs/
+
+*.conf
+*.yaml
+*.yml
