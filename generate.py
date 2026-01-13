@@ -276,6 +276,22 @@ def render_nginx_conf(servers: list[TServer]):
         '"" close;',
         "}",
     ])
+    output.extend([
+        "server {",
+        "listen 80 default_server;",
+        "server_name _;",
+        "return 444;",
+        "}"
+    ])
+    output.extend([
+        "server {",
+        "listen 443 ssl default_server;",
+        "server_name _;",
+        "ssl_certificate /certs/fallback.cer;",
+        "ssl_certificate_key /certs/fallback.key;",
+        "return 444;",
+        "}"
+    ])
     for server in servers:
         output.append("server {")
         if server["listen_ssl"]:
